@@ -1,0 +1,3 @@
+[submodule "gan_preprocessing"]
+	path = gan_preprocessing
+	url = https://github.com/Florian-Barthel/gan_preprocessing.git
