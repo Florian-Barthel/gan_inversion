@@ -13,6 +13,7 @@ class IDLoss(torch.nn.Module):
         self.facenet = Backbone(input_size=112, num_layers=50, drop_ratio=0.6, mode="ir_se")
         model_path = "./models/model_ir_se50.pth"
         if not os.path.exists(model_path):
+            os.makedirs("./models", exist_ok=True)
             urllib.request.urlretrieve("https://huggingface.co/Fubei/splatviz_inversion_checkpoints/resolve/main/model_ir_se50.pth", model_path)
         self.facenet.load_state_dict(torch.load(model_path))
         self.face_pool = torch.nn.AdaptiveAvgPool2d((112, 112))

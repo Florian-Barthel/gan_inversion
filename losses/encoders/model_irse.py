@@ -8,7 +8,7 @@ from torch.nn import (
     Sequential,
     Module,
 )
-from id_loss.models.encoders.helpers import (
+from losses.encoders.helpers import (
     get_blocks,
     Flatten,
     bottleneck_IR,
